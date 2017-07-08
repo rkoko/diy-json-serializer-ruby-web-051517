@@ -8,9 +8,7 @@ $(function () {
     var id = $(this).data("id");
     $.get("/posts/" + id + "/post_data", function(data) {
       // Replace text of body-id div
-      debugger
-      $("#body-" + id).html(this.data["description"]);
-
+      $("#body-" + id).html(data["description"]);
     });
   });
 });
